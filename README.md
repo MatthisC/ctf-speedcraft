@@ -18,11 +18,17 @@ Pour se compliquer la tâche, il a mis en place un serveur qui permet d'intérag
 Configurez le réseau de la machine virtuelle de manière à ce qu'elle soit accessible à votre machine de pentest, et qu'elle ait accès à internet.
 
 Sur la machine virtuelle :
+
 `git clone https://github.com/MatthisC/ctf-speedcraft.git`
+
 `cd ctf-speedcraft`
+
 `docker-compose build`
+
 `docker-compose up`
 
 En cas de crash de la machine (peut arriver suivant ce que vous tentez de faire dessus), relancer là en faisant :
+
 `docker-compose down`
+
 `docker-compose up`
