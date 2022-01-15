@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'styles.css') }}">
+
+    <title>SpeedCraft</title>
+</head>
+<body class="background">
+    <div class="header-div">
+        <div class="header-title">
+            <h1>SpeedCraft</h1>
+        </div>
+        <div class="header-profile">
+            <a href="/login">Se connecter</a>
+        </div>
+    </div>
+    <div class="middle-pannel"> 
+        <form class="middle-pannel-form" method="POST">
+            <h2>S'inscrire</h2>
+            <input name="username" placeholder="Identifiant" />
+            <input name="password" type=password placeholder="Mot de passe" />
+            <input placeholder="Confirmer le mot de passe" type=password/>
+            <button>S'inscrire</button>
+            <a href="/login">Se connecter</a>
+        </form>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'styles.css') }}">
+        <title>SpeedCraft</title>
+    </head>
+    <body>
+        <div class="header-div">
+            <div class="header-title">
+                <h1>SpeedCraft</h1>
+            </div>
+            <div class="header-profile">
+                {% if user == None %}
+                <a href="/login">Se connecter</a>
+                {% endif %}
+                {% if user != None %}
+                <a href="#">Mon profil</a>
+                <p>Coins : {{user['coins']}} </p>
+                {% endif %}
+            </div>
+        </div>
+        <div class="article">
+            <h1>Speedrunning de Minecraft</h1>
+            <p>Mon objectif en 2022 est de battre le record du monde de speedrun de minecraft 1.16.1</p>
+            <p>Pour ça, j'ai mis en place ce serveur. Comme ça, même pendant ma pause du midi je peux continuer de speedrun le jeu.</p>
+            <p>Les règles : </p>
+            <ul>
+                <li>Ne demandez pas à être whitelisté, vous ne le serez pas : c'est MON serveur</li>
+                <li>Si vous voulez m'encourager, n'hésitez pas à <a href='/store'>m'envoyer des feux d'artifice</a>, je les receverai directement dans le jeu !</li>
+                <li>Si vous voulez me compliquer la tâche, vous pouvez <a href='/store'>faire apparaître divers monstres</a> devant moi !</li>
+            </ul>
+        </div>
+    </body>
+</html>

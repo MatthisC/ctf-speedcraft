@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'styles.css') }}">
+    <title>SpeedCraft</title>
+</head>
+<body>
+    <div class="header-div">
+        <div class="header-title">
+            <h1>SpeedCraft</h1>
+        </div>
+        <div class="header-profile">
+            {% if user == None %}
+            <a href="/login">Se connecter</a>
+            {% endif %}
+            {% if user != None %}
+            <a href="#">Mon profil</a>
+            <p>Coins : {{user['coins']}} </p>
+            {% endif %}
+        </div>
+    </div>
+
+    <script>
+        const changeOption = (obj) => {
+            if (obj.value !== "") {
+                document.getElementById("price").innerText = "10"
+            } else {
+                document.getElementById("price").innerText = "00"
+            }
+        }
+
+        const changeSelection = (obj, choice) => {
+            document.getElementById("choice").value = "minecraft:" + choice
+            images = document.getElementsByClassName("image-selector-image")
+            for (i=0;i<images.length;i++) {
+                images[i].classList.remove("image-selected")
+            }
+            obj.classList.add("image-selected")
+            document.getElementById("price").innerText = "10"
+            switch (choice) {
+                case "egg":
+                    document.getElementById("description").innerText = "Fait apparaître un oeuf autour de moi, qui éclate. Avec un peu de chance, un poussin peut en sortir !"
+                    break
+                case "firework_rocket":
+                    document.getElementById("description").innerText = "Fait apparaître un feu d'artifice autour de moi. Vive les feux d'artifices !!"
+                    break
+                case "creeper":
+                    document.getElementById("description").innerText = "Fait apparaître un Creeper autour de moi, qui va alors exploser. SVP ne faites pas ça :'("
+                    break
+                default:
+                    document.getElementById("description").innerText = "La description du produit"
+                    document.getElementById("price").innerText = "00"
+                    document.getElementById("choice").value = ""
+
+            }
+        }
+    </script>
+    <div class="article">
+        <h2>Vous avez {{user['coins']}} coins.</h2>
+        {% if user['hasFreeCoin'] == False %}
+        <h3>Vous n'avez pas réclamé vos pièces gratuites ! <a href='/claim'>Réclamez maintenant !</a></h3>
+        {% endif %}
+        <h3>Vous voulez plus de pièces ? <a href=# >Achetez-en ici !</a></h3>
+        <form method="POST">
+            <h3>Choisissez le bonus / malus à faire apparaître</h3>
+            <div class="image-selector">
+                <div id="image-egg" class="image-selector-image" onclick="changeSelection(this, 'egg')">
+                    <img src="{{ url_for('static', filename = 'egg.jpg') }}"  />
+                </div>
+                <div id="image-firework" class="image-selector-image" onclick="changeSelection(this, 'firework_rocket')">
+                    <img src="{{ url_for('static', filename = 'firework.jpg') }}" />
+                </div>
+                <div id="image-creeper" class="image-selector-image" onclick="changeSelection(this, 'creeper')">
+                    <img src="{{ url_for('static', filename = 'creeper.jpg') }}" />
+                </div>
+            </div>
+            <select id="choice" style="display: none;" name="choice" onchange="changeOption(this)">
+                <option value="">Choisissez une option</option>
+                <option value="minecraft:egg">Un oeuf (inutile, mais j'apprécie le geste)</option>
+                <option value="minecraft:firework_rocket">Un feu d'artifice (Sympa !)</option>
+                <option value="minecraft:creeper">Un Creeper (Pas cool...)</option>
+            </select>
+            <p>Description : <span id="description">La description du produit</span></p>
+            <p>Prix : <span id="price">00</span> coins</p>
+            <button  id='submit'>Acheter !</button>
+        </form>
+
+    </div>
+</body>
+</html>

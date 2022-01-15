@@ -1,0 +1,10 @@
+01/01/2022 
+C'est décidé, cette année je fais un speedrun de minecraft !! Je viens de mettre en place ce serveur et je suis déterminé à tenir ma résolution !
+
+
+02/01/2022
+C'est trop dur... Je vais développer un plugin pour mon serveur minecraft grâce à Github Copilot ! Je m'y met tout de suite !
+
+
+05/01/2022
+J'ai l'impression que Github Copilot n'est pas très au point... Je ne sais pas ce qu'il m'a développé, mais certainement pas un plugin pour minecraft !

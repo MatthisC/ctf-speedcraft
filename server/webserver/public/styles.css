@@ -1,0 +1,144 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    background-image: url('/public/background.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.header-div {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px;
+    background-color: white;
+    height: 8%;
+    box-sizing: border-box;
+}
+
+.header-title {
+    display: flex;
+    align-items: center;
+}
+
+.header-profile {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.header-profile > a {
+    background-color: rgb(94, 113, 197);
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.header-profile > a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.middle-pannel {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 92%;
+}
+
+.middle-pannel-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid #888;
+    background: white;
+    width: 30%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.middle-pannel-form > h2 {
+    font-size: 2rem;
+}
+
+form > button {
+    background-color: rgb(94, 113, 197);
+    color: white;
+    border-radius: 4px;
+    width: 95%;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.middle-pannel-form > input {
+    width: 90%;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 20px;
+    border: 1px solid #ddd;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.middle-pannel-form > input:focus {
+    border: 1px solid #bbb;
+}
+
+.middle-pannel-message {
+    width: 30%;
+    height: 15%;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid #888;
+}
+
+.article {
+    margin: 10%;
+    background: white;
+    padding: 25px 15px;
+    border-radius: 10px ;
+}
+
+.article > button {
+    background-color: rgb(94, 113, 197);
+    color: white;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.image-selector {
+    display: flex;
+    justify-content: space-around;
+}
+
+.image-selector-image {
+    border: 5px solid white;
+    width: 160px;
+    height: 160px;
+}
+
+.image-selector-image:hover {
+    border: 5px solid #eee;
+    cursor: pointer;
+}
+
+
+.image-selected {
+    border: 5px solid rgb(94, 113, 197) !important;
+}
