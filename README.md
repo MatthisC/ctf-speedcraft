@@ -4,7 +4,7 @@ Speedcraft est un challenge de type CTF. Il s'agit d'une machine vulnérable et 
 
 # Prérequis
 
-- Une machine virtuelle sous n'importe quelle distribution stable avec `docker`, `docker-compose`, et `git`.
+- Une machine virtuelle sous n'importe quelle distribution Linux stable avec `docker`, `docker-compose`, et `git`.
 - De la motivation !
 
 # Scénario
