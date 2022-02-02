@@ -97,6 +97,11 @@ def verify_voucher(voucher):
     res = cur.fetchall()
     cur.close()
     if len(res) > 0:
+        conn, cur = connectToDatabase()
+        select_query = 'DELETE FROM freecoins WHERE token=%s'
+        cur.execute(select_query, (voucher,))
+        conn.commit()
+        cur.close()
         return res[0][0]
     else:
         return 0
