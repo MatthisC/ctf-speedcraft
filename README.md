@@ -4,7 +4,7 @@ Speedcraft est un challenge de type CTF. Il s'agit d'une machine vulnérable et 
 
 # Prérequis
 
-- Une machine virtuelle sous n'importe quelle distribution Linux 64bits stable 2Go de RAM et suffisamment d'espace de stockage (sur debian 11 sans interfaces graphique ni outils de base, 4Go suffisent)
+- Une machine virtuelle sous n'importe quelle distribution Linux 64bits stable 2Go de RAM et suffisamment d'espace de stockage (sur debian 11 sans interfaces graphique ni outils de base, 6Go suffisent)
 - `docker`, `docker-compose`, et `git` doivent être présents sur la machine
 - De la motivation !
 
@@ -33,3 +33,6 @@ En cas de crash de la machine (peut arriver suivant ce que vous tentez de faire 
 `docker-compose down`
 
 `docker-compose up`
+
+
+# kjafgoisjrgkjeroijworgsuenkther8
