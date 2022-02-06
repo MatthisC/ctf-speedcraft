@@ -33,6 +33,3 @@ En cas de crash de la machine (peut arriver suivant ce que vous tentez de faire 
 `docker-compose down`
 
 `docker-compose up`
-
-
-# kjafgoisjrgkjeroijworgsuenkther8
